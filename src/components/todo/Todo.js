@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import AddItem from './AddItem';
 
 class Todo extends Component {
     render() {
         return(
-            <div class="todo">
-
+            <div className="todo">
+                <AddItem />
             </div>
         );
     }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../../assets/css/AddItem.css';
 
 class AddItem extends Component {
     render() {
         return(
-            <div class="add-item">
-
+            <div className="add-item">
+                <input className="add-item--input"/>
             </div>
         );
     }

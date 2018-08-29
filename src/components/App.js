@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Todo from './todo/Todo';
+import Pomodoro from './pomodoro/Pomodoro';
 import '../assets/css/App.css';
 
 class App extends Component {
@@ -11,7 +13,8 @@ class App extends Component {
         </header>
 
         <main>
-        
+          <Todo />
+          <Pomodoro />
         </main>
       </div>
     );

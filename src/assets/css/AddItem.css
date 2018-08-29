@@ -1,0 +1,10 @@
+.add-item {
+    position: relative;
+}
+
+.add-item--input {
+    height: 2.5rem;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 2rem;
+}

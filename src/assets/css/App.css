@@ -1,0 +1,27 @@
+.app {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 200;
+  color: #ff6342;
+}
+
+.title--main {
+  padding: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+.title--sub {
+  padding: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  color: #27ae60;
+  text-transform: uppercase;
+}

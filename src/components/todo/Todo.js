@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class TodoConsole extends Component {
+class Todo extends Component {
     render() {
         return(
-            <div class="todo-console">
+            <div class="todo">
 
             </div>
         );
     }
 }
 
-export default TodoConsole;
+export default Todo;

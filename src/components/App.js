@@ -9,6 +9,10 @@ class App extends Component {
           <h1 className="title title--main">Pomlist</h1>
           <span className="title title--sub">Get Things Done</span>
         </header>
+
+        <main>
+        
+        </main>
       </div>
     );
   }

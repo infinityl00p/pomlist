@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class TodoConsole extends Component {
+class Pomodoro extends Component {
     render() {
         return(
-            <div class="todo-console">
+            <div class="pomodoro">
 
             </div>
         );
     }
 }
 
-export default TodoConsole;
+export default Pomodoro;

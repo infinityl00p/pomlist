@@ -13,12 +13,8 @@ class AddItem extends Component {
                 />
                 <div className="button-group clearfix">
                     <Button
-                        className={'button--cancel color--red'}
-                        buttonContent={'Cancel'}
-                    />
-                    <Button
-                        className={'button--add color--green'}
-                        buttonContent={'Add'}
+                        className={'button--icon button--add color--blue'}
+                        buttonContent={<i className="fas fa-plus"></i>}
                     />
                 </div>
             </div>

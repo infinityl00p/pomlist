@@ -5,8 +5,8 @@ import '../../assets/css/Timer.css';
 
 class Timer extends Component {
     state = { 
-        minutes: 24,
-        seconds: 50
+        minutes: 0,
+        seconds: 0
     }
 
     getElapsedPercentage = () => {
@@ -52,7 +52,9 @@ class Timer extends Component {
     }
 
     render() {
-        this.startTimer();
+        if (this.props.timerState === 'on') {
+            this.startTimer();
+        }
 
         return(
             <div className="progress-bar">

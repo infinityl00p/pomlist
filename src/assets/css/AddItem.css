@@ -1,10 +1,17 @@
-.add-item {
-    position: relative;
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-.add-item--input {
-    height: 2.5rem;
-    padding: 1rem;
-    width: 80%;
-    border-radius: 2rem;
+.add-item {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button-group {
+    width: 40%;
+    margin: 0 auto;
+    padding: 2rem;
 }

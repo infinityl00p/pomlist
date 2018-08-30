@@ -1,3 +1,14 @@
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+
 .app {
   text-align: center;
 }
@@ -9,7 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 5rem;
   font-weight: 200;
-  color: #ff6342;
 }
 
 .title--main {
@@ -19,11 +29,12 @@ h1 {
 }
 
 .title--sub {
+  position: relative;
+  bottom: 2rem;
   display: block;
   padding: 1rem;
   font-size: 1.4rem;
-  letter-spacing: 0.15em;
-  color: #27ae60;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }

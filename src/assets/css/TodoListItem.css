@@ -1,0 +1,15 @@
+.todo-list-item {
+  display: block;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 2rem;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition: 300ms ease-out;
+}
+
+.todo-list-item:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 8px 8px 1rem rgba(0, 0, 0, 0.3);
+}

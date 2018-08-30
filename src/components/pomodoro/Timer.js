@@ -5,7 +5,7 @@ import '../../assets/css/Timer.css';
 
 class Timer extends Component {
     state = { 
-        minutes: 1,
+        minutes: 24,
         seconds: 50
     }
 
@@ -19,20 +19,25 @@ class Timer extends Component {
     startTimer = () => { setTimeout(this.updateTime, 1000); }
 
     updateTime = () => { 
-        //FIXME: get the logic right
-        if (this.state.seconds == 59) {
-            this.setState({
-                minutes: this.state.minutes + 1,
-                seconds: 0
-            });
-        } 
-        
         if (this.state.minutes === 24 && this.state.seconds === 59) {
             this.setState({
                 minutes: 0,
                 seconds: 0
             });
-        } else if (this.state.seconds !== 59) {
+
+            return;
+        }
+
+        if (this.state.seconds == 59) {
+            this.setState({
+                minutes: this.state.minutes + 1,
+                seconds: 0
+            });
+            
+            return;
+        } 
+
+        else {
             this.setState({ seconds: this.state.seconds + 1 }); 
         }
     }

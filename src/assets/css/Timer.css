@@ -1,0 +1,13 @@
+.timer {
+  background-color: #333;
+  padding: 1rem 0;
+  width: 10%;
+  margin: 0 auto 2rem;
+}
+
+.time {
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+}

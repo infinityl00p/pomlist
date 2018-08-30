@@ -1,0 +1,20 @@
+.add-item--input {
+  color: #333;
+  height: 2rem;
+  padding: 5px;
+  width: 40%;
+  border-radius: 2rem;
+  transition: 400ms ease;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.add-item--input::placeholder { color: #ddd; }
+
+.add-item--input:focus {
+  outline: none;
+  width: 80%;
+}

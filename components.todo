@@ -2,9 +2,8 @@
   	☐ Todo
     	☐ Add Item
       		☐ Input
-      		☐ Controls
-        		☐ Button (Add)
-        		☐ Button (Cancel)
+					☐ Button (Add)
+					☐ Button (Cancel)
     	☐ Todo Console
       		☐ List Toggle
         		☐ List Toggle Item
@@ -12,9 +11,8 @@
         		☐ Todo List Item
   	☐ Pomodoro
     	☐ Timer
-			☐ Time (Hours)
-			☐ Time (Seconds)
-    	☐ Controls
-			☐ Button (start)
-			☐ Button (stop)
-			☐ Button (pause)
+					☐ Time (Hours)
+					☐ Time (Seconds)
+				☐ Button (start)
+				☐ Button (stop)
+				☐ Button (pause)

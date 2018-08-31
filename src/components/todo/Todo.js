@@ -32,12 +32,9 @@ class Todo extends Component {
 
     onAddItem = () => {
         if (this.state.inputText) {
-            const newList = this.state.todoList;
-            newList.push(this.state.inputText);
-            this.setState({
-                todoList: newList,
-                inputText: ""
-            })
+            this.props.addItem(this.state.inputText);
+
+            this.setState({ inputText: "" })
         }
 
         return;

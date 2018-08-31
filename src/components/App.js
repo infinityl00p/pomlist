@@ -6,13 +6,38 @@ import '../assets/css/App.css';
 
 class App extends Component {
   state = {
-    activeItemId: null
-  }
+    userData: userData,
+    activeItemId: null,
+    activePomodoro: {}
+  };
 
   handleTodoItemClick = (id) => {
     this.setState({
       activeItemId: id
+    }, this.updateCurrentPom);
+  }
+
+  addItem = (todo) => {
+    const userData = this.state.userData;
+
+    userData.push({
+      id: Math.floor(Math.random() * 100 + 5),
+      todo,
+      archive: false,
+      completedPoms: 0
     });
+
+    this.setState({ userData });
+  }
+
+  updateCurrentPom = () => {
+    var activePomodoro = this.state.userData.filter((object) => {
+      if (object.id === this.state.activeItemId) {
+        return object.Pomodoro;
+      }
+    });
+
+    return this.setState({ activePomodoro: activePomodoro[0].Pomodoro });
   }
 
   render() {
@@ -26,11 +51,14 @@ class App extends Component {
 
           <main>
             <Todo
-              data={userData}
+              data={this.state.userData}
               handleClick={this.handleTodoItemClick}
+              addItem={this.addItem}
               activeItem={this.state.activeItemId}
             />
-            <Pomodoro />
+            <Pomodoro
+              activePomodoro={this.state.activePomodoro}
+            />
           </main>
         </div>
       </div>

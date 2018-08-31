@@ -1,0 +1,14 @@
+.pomodoro.inactive button{ border: 1px solid #ddd; }
+
+.pomodoro.inactive i { color: #ddd; }
+
+.pomodoro.inactive .CircularProgressbar-text { fill: #ddd!important; }
+
+.pomodoro.inactive .CircularProgressbar .CircularProgressbar-trail { stroke: #ddd; }
+
+.pomodoro.inactive .CircularProgressbar .CircularProgressbar-path { stroke: #ddd!important; }
+
+.pomodoro.inactive .button--play, .pomodoro.inactive .button--pause, .pomodoro.inactive .button--stop {
+  color: #ddd;
+  background-color: #aaa;
+}

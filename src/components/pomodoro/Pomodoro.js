@@ -5,16 +5,17 @@ import '../../assets/css/Pomodoro.css';
 
 class Pomodoro extends Component {
     state = {
+        active: false,
         workPeriod: true,
         timerOn: false
     }
 
     toggleTimer = (event) => {
-        this.setState({ timerOn: !this.state.timerOn });
+        return this.setState({ timerOn: !this.state.timerOn });
     }
 
     togglePomState = () => {
-        return this.setState({ workPeriod: !this.state.workPeriod })
+        return this.setState({ workPeriod: !this.state.workPeriod });
     }
 
     getClassNames = () => {
@@ -35,9 +36,11 @@ class Pomodoro extends Component {
 
 
     render() {
-        var classNames = this.getClassNames();
+        const pomodoroClassName = this.state.active ?  "pomodoro" : "pomodoro inactive";
+        const buttonClassNames = this.getClassNames();
+
         return(
-            <section className="pomodoro">
+            <section className={pomodoroClassName}>
                 <Timer
                     timerOn={this.state.timerOn}
                     workPeriod={this.state.workPeriod}
@@ -45,9 +48,10 @@ class Pomodoro extends Component {
                     toggleTimer={this.toggleTimer}
                 />
                 <Button
-                    buttonContent={<i className={classNames.iconClass}></i>}
-                    className={classNames.buttonClass}
+                    buttonContent={<i className={buttonClassNames.iconClass}></i>}
+                    className={buttonClassNames.buttonClass}
                     onClick={this.toggleTimer}
+                    active={this.state.active}
                 />
             </section>
         );

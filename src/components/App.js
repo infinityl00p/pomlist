@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import Todo from './todo/Todo';
 import Pomodoro from './pomodoro/Pomodoro';
+import { userData } from '../assets/js/data.js';
 import '../assets/css/App.css';
 
 class App extends Component {
+  state = {
+    activeItemId: null
+  }
+
+  handleTodoItemClick = (id) => {
+    this.setState({
+      activeItemId: id
+    });
+  }
+
   render() {
     return (
       <div className="wrapper">
@@ -14,7 +25,11 @@ class App extends Component {
           </header>
 
           <main>
-            <Todo />
+            <Todo
+              data={userData}
+              handleClick={this.handleTodoItemClick}
+              activeItem={this.state.activeItemId}
+            />
             <Pomodoro />
           </main>
         </div>

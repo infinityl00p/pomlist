@@ -11,21 +11,33 @@ const todoList = [
 
 
 class Todo extends Component {
-    state = {
-        inputText: "",
-        todoList: todoList
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            inputText: "",
+            todoList: props.data
+        }
+    }
 
     onInputChange = (event) => {
         this.setState({ inputText: event.target.value });
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+
+        this.onAddItem();
     }
 
     onAddItem = () => {
         if (this.state.inputText) {
             const newList = this.state.todoList;
             newList.push(this.state.inputText);
-            console.log(newList);
-            this.setState({ todoList: newList })
+            this.setState({
+                todoList: newList,
+                inputText: ""
+            })
         }
 
         return;
@@ -33,16 +45,18 @@ class Todo extends Component {
 
     render() {
         return(
-            <div className="todo">
+            <section className="todo">
                 <AddItem
                     inputValue={this.state.inputText}
                     handleChange={this.onInputChange}
-                    handleClick={this.onAddItem}
+                    handleSubmit={this.onSubmit}
                 />
                 <TodoConsole
                     todoList={this.state.todoList}
+                    handleClick={this.props.handleClick}
+                    activeItem={this.props.activeItem}
                 />
-            </div>
+            </section>
         );
     }
 }

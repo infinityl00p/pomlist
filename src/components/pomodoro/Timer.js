@@ -5,8 +5,8 @@ import '../../assets/css/Timer.css';
 
 class Timer extends Component {
     state = {
-        minutes: 24,
-        seconds: 55
+        minutes: 0,
+        seconds: 0
     }
 
     getElapsedPercentage = () => {

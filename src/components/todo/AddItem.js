@@ -6,7 +6,7 @@ import '../../assets/css/AddItem.css';
 class AddItem extends Component {
     render() {
         return(
-            <div className="add-item">
+            <form className="add-item" onSubmit={this.props.handleSubmit}>
                 <Input
                     className={'add-item--input'}
                     placeholder={'eg. complete 1 chapter of my book'}
@@ -17,10 +17,10 @@ class AddItem extends Component {
                     <Button
                         className={'button--icon button--add color--blue'}
                         buttonContent={<i className="fas fa-plus"></i>}
-                        onClick={this.props.handleClick}
+                        type={'submit'}
                     />
                 </div>
-            </div>
+            </form>
         );
     }
 }

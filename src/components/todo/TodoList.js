@@ -7,13 +7,17 @@ class TodoList extends Component {
         return(
             <div className="todo-list">
                 {
-                    this.props.todoList.map((listItem, i) => {
+                    this.props.todoList.map((dataObject, i) => {
                         const keyString = i + "-" + "list-item";
 
                         return (
                             <TodoListItem
                                 key={keyString}
-                                description={listItem}
+                                id={dataObject.id}
+                                description={dataObject.todo}
+                                pomsCompleted={dataObject.completedPoms}
+                                handleClick={this.props.handleClick}
+                                activeItem={this.props.activeItem}
                             />
                         );
                     })

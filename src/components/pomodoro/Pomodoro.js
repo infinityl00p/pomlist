@@ -37,7 +37,7 @@ class Pomodoro extends Component {
     render() {
         var classNames = this.getClassNames();
         return(
-            <div className="pomodoro">
+            <section className="pomodoro">
                 <Timer
                     timerOn={this.state.timerOn}
                     workPeriod={this.state.workPeriod}
@@ -47,9 +47,9 @@ class Pomodoro extends Component {
                 <Button
                     buttonContent={<i className={classNames.iconClass}></i>}
                     className={classNames.buttonClass}
-                    action={this.toggleTimer}
+                    onClick={this.toggleTimer}
                 />
-            </div>
+            </section>
         );
     }
 }

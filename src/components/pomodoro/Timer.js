@@ -52,9 +52,9 @@ class Timer extends Component {
     }
 
     render() {
-        if (this.props.timerState === 'on') {
+        if (this.props.timerOn) {
             this.startTimer();
-        }
+        } 
 
         return(
             <div className="progress-bar">

@@ -4,10 +4,20 @@ import Button from '../reusable/Button';
 import '../../assets/css/Pomodoro.css';
 
 class Pomodoro extends Component {
-    state = { timerState: null }
+    state = { timerOn: false }
 
-    startTime = (event) => {
-        this.setState({ timerState: 'on' });
+    toggleTimer = (event) => {
+        this.setState({ timerOn: !this.state.timerOn });
+    }
+
+    getButtonClass = () => {
+        const className = "button--icon";
+
+        if (this.state.timerState) {
+            return className + " button--play color--green"
+        } else {
+            return className + " button--pause color--red"
+        }
     }
 
     render() {
@@ -15,7 +25,7 @@ class Pomodoro extends Component {
             <div className="pomodoro">
 
                 <Timer 
-                    timerState={this.state.timerState}
+                    timerOn={this.state.timerOn}
                 />
                 {/* <Button
                     buttonContent={<i className="fas fa-stop"></i>}
@@ -28,8 +38,8 @@ class Pomodoro extends Component {
                 /> */}
                 <Button
                     buttonContent={<i className="fas fa-play"></i>}
-                    className={'button--icon button--play color--green'}
-                    action={this.startTime}
+                    className={this.getButtonClass()}
+                    action={this.toggleTimer}
                 />
             </div>
         );

@@ -4,41 +4,49 @@ import Button from '../reusable/Button';
 import '../../assets/css/Pomodoro.css';
 
 class Pomodoro extends Component {
-    state = { timerOn: false }
+    state = {
+        workPeriod: true,
+        timerOn: false
+    }
 
     toggleTimer = (event) => {
         this.setState({ timerOn: !this.state.timerOn });
     }
 
-    getButtonClass = () => {
+    togglePomState = () => {
+        return this.setState({ workPeriod: !this.state.workPeriod })
+    }
+
+    getClassNames = () => {
         const className = "button--icon";
 
-        if (this.state.timerState) {
-            return className + " button--play color--green"
+        if (this.state.timerOn) {
+            return  {
+                iconClass: "fas fa-stop",
+                buttonClass: className + " button--stop color--red"
+            }
         } else {
-            return className + " button--pause color--red"
+            return {
+                iconClass: "fas fa-play",
+                buttonClass: className + " button--play color--green"
+            }
         }
     }
 
+
     render() {
+        var classNames = this.getClassNames();
         return(
             <div className="pomodoro">
-
-                <Timer 
+                <Timer
                     timerOn={this.state.timerOn}
+                    workPeriod={this.state.workPeriod}
+                    togglePomState={this.togglePomState}
+                    toggleTimer={this.toggleTimer}
                 />
-                {/* <Button
-                    buttonContent={<i className="fas fa-stop"></i>}
-                    className={'button--icon button--stop color--red'}
-                /> */}
-                {/* <Button
-                    buttonContent={<i className="fas fa-pause"></i>}
-                    className={'button--icon button--pause'}
-                    action={this.startTime}
-                /> */}
                 <Button
-                    buttonContent={<i className="fas fa-play"></i>}
-                    className={this.getButtonClass()}
+                    buttonContent={<i className={classNames.iconClass}></i>}
+                    className={classNames.buttonClass}
                     action={this.toggleTimer}
                 />
             </div>

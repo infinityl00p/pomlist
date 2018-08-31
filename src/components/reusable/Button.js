@@ -7,6 +7,7 @@ class Button extends Component {
       <button
         className={this.props.className}
         onClick={this.props.onClick}
+        type={this.props.type}
       >
         {this.props.buttonContent}
       </button>

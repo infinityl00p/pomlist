@@ -9,6 +9,8 @@ class TodoConsole extends Component {
                 <ListToggle />
                 <TodoList
                     todoList={this.props.todoList}
+                    handleClick={this.props.handleClick}
+                    activeItem={this.props.activeItem}
                 />
             </div>
         );

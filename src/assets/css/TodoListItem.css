@@ -1,5 +1,6 @@
 .todo-list-item {
   display: block;
+  position: relative;
   border: 1px solid #ddd;
   background-color: #fff;
   font-size: 2rem;
@@ -8,8 +9,49 @@
   transition: 300ms ease-out;
 }
 
+.todo-list-item.active {
+  border: 2px solid #2196F3;
+  color: #2196F3;
+  font-weight: 400;
+}
+
+.todo-list-item span {
+  display: inline-block;
+}
+
+.todo-list-item .description {
+  width: 80%;
+  text-align: left;
+}
+
+.todo-list-item .poms-completed {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+  text-align: right;
+}
+
 .todo-list-item:hover {
   cursor: pointer;
   transform: scale(1.01);
   box-shadow: 8px 8px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.icon-tomato{
+	background-image:  url("../svg/tomato.svg");
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
+}
+
+.icon-tomato,
+.icon-tomato:before,
+.icon-tomato:after{
+	width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 2px;
 }

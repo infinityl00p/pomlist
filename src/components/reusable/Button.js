@@ -4,9 +4,9 @@ import '../../assets/css/Button.css';
 class Button extends Component {
   render() {
     return(
-      <button 
+      <button
         className={this.props.className}
-        onClick={this.props.action}  
+        onClick={this.props.onClick}
       >
         {this.props.buttonContent}
       </button>

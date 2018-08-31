@@ -7,7 +7,9 @@ class TodoConsole extends Component {
         return(
             <div className="todo-console">
                 <ListToggle />
-                <TodoList />
+                <TodoList
+                    todoList={this.props.todoList}
+                />
             </div>
         );
     }

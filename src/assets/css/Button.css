@@ -1,4 +1,5 @@
 button:hover { cursor: pointer; }
+button:focus { outline: none; }
 
 .button--icon {
   position: relative;
@@ -7,6 +8,12 @@ button:hover { cursor: pointer; }
   width: 5rem;
   border-radius: 10rem;
   margin: 0 1rem;
+}
+
+.pom__button {
+  position: relative;
+  transform: translateY(-100%);
+  bottom: 3rem;
 }
 
 .button--icon i {
@@ -36,6 +43,8 @@ button:hover { cursor: pointer; }
   border: 1px solid #27ae60;
   transition: 300ms ease;
 }
+
+.button--play i { transform: translate(-40%, -50%)}
 
 .button--add:hover { background-color: #2196F3; }
 .button--add:hover i { color: #fff; }

@@ -53,7 +53,7 @@ class Timer extends Component {
     }
 
     incrementTime = () => {
-        if (this.state.seconds == 59) {
+        if (this.state.seconds === 59) {
             this.setState({
                 minutes: this.state.minutes + 1,
                 seconds: 0

@@ -7,6 +7,8 @@ class Input extends Component {
       <input
         className={this.props.className}
         placeholder={this.props.placeholder}
+        value={this.props.value}
+        onChange={this.props.onChange}
       />
     );
   }

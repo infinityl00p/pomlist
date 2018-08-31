@@ -23,12 +23,12 @@ class Pomodoro extends Component {
         if (this.state.timerOn) {
             return  {
                 iconClass: "fas fa-stop",
-                buttonClass: className + " button--stop color--red"
+                buttonClass: className + " pom__button button--stop color--red"
             }
         } else {
             return {
                 iconClass: "fas fa-play",
-                buttonClass: className + " button--play color--green"
+                buttonClass: className + " pom__button button--play color--green"
             }
         }
     }

@@ -6,9 +6,8 @@ module.exports = {
       archive: false,
       completedPoms: 2,
       Pomodoro: {
-        workPeriod: true,
-        minutes: 4,
-        seconds: 20
+        minutes: 24,
+        seconds: 55
       }
     },
     {
@@ -17,9 +16,8 @@ module.exports = {
       archive: false,
       completedPoms: 0,
       Pomodoro: {
-        workPeriod: false,
         minutes: 4,
-        seconds: 20
+        seconds: 55
       }
     },
     {
@@ -28,7 +26,6 @@ module.exports = {
       archive: false,
       completedPoms: 1,
       Pomodoro: {
-        workPeriod: true,
         minutes: 4,
         seconds: 20
       },
@@ -39,7 +36,6 @@ module.exports = {
       archive: true,
       completedPoms: 3,
       Pomodoro: {
-        workPeriod: true,
         minutes: 4,
         seconds: 20
       }

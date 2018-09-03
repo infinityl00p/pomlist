@@ -15,9 +15,10 @@ class AddItem extends Component {
                 />
                 <div className="button-group clearfix">
                     <Button
-                        className={'button--icon button--add color--blue'}
+                        className={'button--icon button--add'}
                         buttonContent={<i className="fas fa-plus"></i>}
                         type={'submit'}
+                        disabled={this.props.disabled}
                     />
                 </div>
             </form>

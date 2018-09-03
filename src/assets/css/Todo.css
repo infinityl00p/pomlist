@@ -1,0 +1,13 @@
+.todo.disabled .todo-list-item {
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+
+.todo.disabled .button--add {
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+
+.todo.disabled .button--add:hover { background-color: #fff; }
+
+.todo.disabled .button--add:hover i { color: #ddd; }

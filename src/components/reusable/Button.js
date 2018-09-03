@@ -3,12 +3,12 @@ import '../../assets/css/Button.css';
 
 class Button extends Component {
   render() {
-    return(
+  return(
       <button
         className={this.props.className}
         onClick={this.props.onClick}
         type={this.props.type}
-        disabled={!this.props.active}
+        disabled={this.props.disabled}
       >
         {this.props.buttonContent}
       </button>

@@ -8,7 +8,7 @@ class TodoList extends Component {
             <div className="todo-list">
                 {
                     this.props.todoList.map((dataObject, i) => {
-                        const keyString = i + "-" + "list-item";
+                        const keyString = `${i}-list-item`;
 
                         return (
                             <TodoListItem

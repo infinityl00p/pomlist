@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import AddItem from './AddItem';
 import TodoConsole from './TodoConsole';
-
-
-const todoList = [
-    "Voluptate mollit velit culpa nostrud aliquip esse culpa aliqua proident tempor.",
-    "Adipisicing deserunt cupidatat laborum tempor esse proident excepteur aute esse consectetur dolor quis. Est laborum aute enim eu nisi deserunt amet ipsum officia. Sit irure occaecat irure minim. Dolore consectetur consequat id est est eu.",
-    "Aliquip irure nulla id culpa anim ex non adipisicing irure ut."
-]
+import '../../assets/css/Todo.css';
 
 
 class Todo extends Component {
@@ -40,18 +34,25 @@ class Todo extends Component {
         return;
     }
 
+    getClassName = () => {
+        if(this.props.disabled) { return "todo disabled"; }
+        return "todo";
+    }
+
     render() {
         return(
-            <section className="todo">
+            <section className={this.getClassName()}>
                 <AddItem
                     inputValue={this.state.inputText}
                     handleChange={this.onInputChange}
                     handleSubmit={this.onSubmit}
+                    disabled={this.props.disabled}
                 />
                 <TodoConsole
                     todoList={this.state.todoList}
                     handleClick={this.props.handleClick}
                     activeItem={this.props.activeItem}
+                    disabled={this.props.disabled}
                 />
             </section>
         );

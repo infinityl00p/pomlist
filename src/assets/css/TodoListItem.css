@@ -21,6 +21,7 @@
 
 .todo-list-item span {
   display: inline-block;
+  padding: 1rem;
 }
 
 .todo-list-item .description {

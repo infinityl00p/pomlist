@@ -11,6 +11,7 @@
 
 .app {
   text-align: center;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +21,24 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 5rem;
   font-weight: 200;
+}
+
+aside, main {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+aside {
+  left: 0;
+  right: 75%;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+main {
+  left: 25%;
+  right: 0;
 }
 
 .title--main {
@@ -37,4 +56,34 @@ h1 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 769px) {
+  main, aside {
+    position: relative;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  main {
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+
+  aside {
+    float: right;
+    width: 100%;
+    padding-bottom: 5rem;
+  }
+
+  aside .pomodoro {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }

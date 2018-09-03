@@ -4,95 +4,53 @@ import 'react-circular-progressbar/dist/styles.css';
 import '../../assets/css/Timer.css';
 
 class Timer extends Component {
-    state = {
-        minutes: 0,
-        seconds: 0
+    formatTime = (minutes, seconds) => {
+        return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
     }
 
-    getElapsedPercentage = () => {
-        var ElapsedInSeconds = (this.state.minutes * 60) + this.state.seconds;
+    getPercentage = () => {
+        var ElapsedInSeconds = (this.props.minutes * 60) + this.props.seconds;
         var secondsInTime = 25 * 60;
 
         return (ElapsedInSeconds / secondsInTime) * 100;
     }
 
-    startTimer = () => { setTimeout(this.updateTime, 1000); }
-    pauseTimer = () => { clearTimeout(this.updateTime); }
+    getTimeString = () => {
+        var timeString = this.getTimeString();
+        document.title = timeString;
 
-    updateTime = () => {
-        if (this.props.workPeriod) {
-            if (this.state.minutes === 24 && this.state.seconds === 59) {
-                this.setState({
-                    minutes: 0,
-                    seconds: 0
-                });
-
-                this.props.toggleTimer();
-                this.props.togglePomState();
-
-                return;
-            }
-
-            this.incrementTime();
-        } else if (!this.props.workPeriod) {
-            if (this.state.minutes === 4 && this.state.seconds === 59) {
-                this.setState({
-                    minutes: 0,
-                    seconds: 0
-                });
-
-                this.props.toggleTimer();
-                this.props.togglePomState();
-                return;
-            }
-
-            this.incrementTime();
-        }
-
-        return;
+        return timeString;
     }
-
-    incrementTime = () => {
-        if (this.state.seconds === 59) {
-            this.setState({
-                minutes: this.state.minutes + 1,
-                seconds: 0
-            });
-
-            return;
-        } else {
-            this.setState({ seconds: this.state.seconds + 1 });
-        }
-    }
-
-    formatNumber = (rawNumber) => { return ("0" + rawNumber).slice(-2); }
 
     getTimeString = () => {
-        var minutes = this.formatNumber(this.state.minutes);
-        var seconds = this.formatNumber(this.state.seconds);
-
-        return minutes + ":" + seconds;
+        return this.formatTime(this.props.minutes || 0, this.props.seconds || 0);
     }
 
-    render() {
-        if (this.props.timerOn) {
-            this.startTimer();
-        } else if (!this.props.timerOff) {
-            this.pauseTimer();
-        }
+    getStyles = () => {
+        const color = this.getColor(this.props.workPeriod, '#27ae60', '#ff6342');
 
-        const percentage = this.getElapsedPercentage();
-        const barColor = this.props.workPeriod ? '#27ae60' : '#ff6342';
+        return {
+            path: { stroke: color },
+            text: { fill: color, fontSize: '16px' }
+        }
+    }
+
+    getColor = (conditional, color1, color2) => { conditional ? color1 : color2; }
+
+    render() {
+        if (this.props.timerOn) { this.props.startTimer(); }
+        else if (!this.props.timerOff) { this.props.stopTimer(); }
+
+        const styles = this.getStyles();
+        const timeString = this.getTimeString();
+        document.title = timeString;
 
         return(
             <div className="progress-bar">
                 <CircularProgressbar
-                    percentage={percentage}
-                    text={this.getTimeString()}
-                    styles={{
-                        path: { stroke: barColor },
-                        text: { fill: barColor, fontSize: '16px' },
-                    }}
+                    percentage={this.getPercentage()}
+                    text={timeString}
+                    styles={styles}
                 />
             </div>
         );

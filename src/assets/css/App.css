@@ -61,7 +61,7 @@ main {
 @media only screen and (max-width: 769px) {
   main, aside {
     position: relative;
-    display: inline-block;
+    display: block;
     left: 0;
     right: 0;
     top: 0;
@@ -69,13 +69,11 @@ main {
   }
 
   main {
-    float: left;
     text-align: center;
     width: 100%;
   }
 
   aside {
-    float: right;
     width: 100%;
     padding-bottom: 5rem;
   }

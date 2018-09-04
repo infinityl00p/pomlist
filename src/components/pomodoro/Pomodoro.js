@@ -125,7 +125,6 @@ class Pomodoro extends Component {
         if (this.state.disabled) { pomodoroClassName += " disabled"; }
         if (this.state.workPeriod) { pomodoroClassName += " work"; }
 
-
         return pomodoroClassName;
     }
 

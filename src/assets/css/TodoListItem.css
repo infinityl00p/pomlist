@@ -10,23 +10,29 @@
 
 .todo-list-item:hover {
   cursor: pointer;
-  border: 1px solid #2196F3;
-  color: #2196F3;
+  border: 1px solid #ff6342;
+  color: #ff6342;
 }
 
 .todo-list-item.active {
-  border: 1px solid #2196F3;
-  color: #2196F3;
+  border: 1px solid #ff6342;
+  color: #ff6342;
 }
 
-.todo-list-item span {
-  display: inline-block;
-  padding: 1rem;
+.todo-list-item .description, .todo-list-item .poms-completed {
+  display: block;
+  padding: 5px;
+}
+
+.todo-list-item .poms-completed {
+  width: 15%;
+  text-align: right;
 }
 
 .todo-list-item .description {
   width: 80%;
   text-align: left;
+  font-size: 1.5rem;
 }
 
 .todo-list-item .poms-completed {
@@ -34,8 +40,6 @@
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 20%;
-  text-align: right;
 }
 
 .icon-tomato{

@@ -2,9 +2,9 @@ module.exports = {
   userData :[
     {
       id: 1,
-      todo: "Voluptate mollit velit culpa nostrud aliquip esse culpa aliqua proident tempor.",
+      todo: "Voluptate mollit velit culpa nostrud aliquip esse culpa aliqua proident tempor. Voluptate mollit velit culpa nostrud aliquip esse culpa aliqua proident tempor.",
       archive: false,
-      completedPoms: 2,
+      completedPoms: 4,
       Pomodoro: {
         minutes: 24,
         seconds: 55

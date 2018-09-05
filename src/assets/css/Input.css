@@ -2,10 +2,12 @@
   color: #333;
   height: 2rem;
   padding: 5px;
-  width: 40%;
-  border-radius: 2rem;
+  width: 100%;
   transition: 400ms ease;
   border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-color: #ccc;
   border-width: 1px;
   text-align: center;
@@ -14,7 +16,7 @@
 
 .add-item--input::placeholder { color: #ddd; }
 
-.add-item--input:focus {
+/* .add-item--input:focus {
   outline: none;
   width: 80%;
-}
+} */

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Todo from './todo/Todo';
 import Pomodoro from './pomodoro/Pomodoro';
-// import { userData } from '../assets/js/data.js';
+import { userData } from '../assets/js/data.js';
 import '../assets/css/App.css';
 
 class App extends Component {
   state = {
-    userData: [], //FIXME: userData
+    userData: userData,
     activeItemId: null,
     todoDisabled: false,
     activePomodoro: {}

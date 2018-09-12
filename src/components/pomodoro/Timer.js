@@ -38,9 +38,6 @@ class Timer extends Component {
     getColor = (conditional, color1, color2) => { conditional ? color1 : color2; }
 
     render() {
-        if (this.props.timerOn) { this.props.startTimer(); }
-        else if (!this.props.timerOff) { this.props.stopTimer(); }
-
         const styles = this.getStyles();
         const timeString = this.getTimeString();
         document.title = timeString;

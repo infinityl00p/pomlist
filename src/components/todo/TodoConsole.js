@@ -7,7 +7,7 @@ class TodoConsole extends Component {
     render() {
         return(
             <div className="todo-console">
-                <ListToggle />
+                {/* <ListToggle /> */}
                 <TodoList
                     todoList={this.props.todoList}
                     handleClick={this.props.handleClick}

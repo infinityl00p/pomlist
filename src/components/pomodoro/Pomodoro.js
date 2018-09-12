@@ -4,10 +4,16 @@ import Button from '../reusable/Button';
 import '../../assets/css/Pomodoro.css';
 
 class Pomodoro extends Component {
-    state = {
-        disabled: true,
-        timerOn: false,
-        workPeriod: null
+    constructor() {
+        super();
+
+        this.state = {
+            disabled: true,
+            timerOn: false,
+            workPeriod: null
+        }
+
+        setInterval(this.handleTimeChange, 1000);
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -18,14 +24,6 @@ class Pomodoro extends Component {
         } else {
             this.setState({ disabled: true });
         }
-    }
-
-    startTimer = () => {
-        return setTimeout(this.handleTimeChange, 1000);
-    }
-
-    stopTimer = () => {
-        return clearTimeout(this.startTimer);
     }
 
     handleToggle = (event) => {
@@ -46,8 +44,9 @@ class Pomodoro extends Component {
         return this.setState({ workPeriod });
     }
 
-    handleTimeChange = (minutes, seconds) => {
-        const maxWorkMinutes = 25,
+    handleTimeChange = () => {
+        if(this.state.timerOn) {
+            const maxWorkMinutes = 25,
             maxWorkSeconds = 59,
             maxRestMinutes = 5,
             currentMinutes = this.props.activePomodoro.minutes,
@@ -71,6 +70,7 @@ class Pomodoro extends Component {
         }
 
         return;
+        }
     }
 
     handleMaxTime = () => {
@@ -136,8 +136,6 @@ class Pomodoro extends Component {
                 <Timer
                     timerOn={this.state.timerOn}
                     workPeriod={this.state.workPeriod}
-                    startTimer={this.startTimer}
-                    stopTimer={this.stopTimer}
                     minutes={this.getMinutes()}
                     seconds={this.getSeconds()}
                 />

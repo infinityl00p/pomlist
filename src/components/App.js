@@ -28,8 +28,8 @@ class App extends Component {
       userData,
       activeItemId: id,
       activePomodoro: {
-        minutes: 24,
-        seconds: 55
+        minutes: 0,
+        seconds: 0
       }
     });
   }

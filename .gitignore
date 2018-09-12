@@ -1,5 +1,5 @@
 # Ignore Node Modules
 /node_modules/
-
+/build
 # Ignore Notes
 /prioritize_then_execute.todo

@@ -1,10 +1,17 @@
 .todo.disabled .todo-list-item {
   border: 1px solid #ddd;
-  color: #ddd;
+  background-color: #ddd;
+  color: #bbb;
 }
 
 .todo.disabled .button--add {
   border: 1px solid #ddd;
+  color: #ddd;
+}
+
+.todo.disabled .add-item--input {
+  border-bottom: 1px solid #ddd;
+  background-color: #ddd;
   color: #ddd;
 }
 

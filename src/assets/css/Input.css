@@ -14,7 +14,8 @@
   font-size: 1.8rem;
 }
 
-.add-item--input::placeholder { color: #ddd; }
+.add-item--input::placeholder { color: #ccc; }
+.add-item--input:focus { outline: none; }
 
 /* .add-item--input:focus {
   outline: none;

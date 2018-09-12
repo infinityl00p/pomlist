@@ -9,9 +9,10 @@ class AddItem extends Component {
             <form className="add-item" onSubmit={this.props.handleSubmit}>
                 <Input
                     className={'add-item--input'}
-                    placeholder={'eg. complete 1 chapter of my book'}
+                    placeholder={'Add a task that you want to focus on!'}
                     onChange={this.props.handleChange}
                     value={this.props.inputValue}
+                    disabled={this.props.disabled}
                 />
                 <div className="button-group clearfix">
                     <Button

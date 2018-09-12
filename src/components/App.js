@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Todo from './todo/Todo';
 import Pomodoro from './pomodoro/Pomodoro';
-import { userData } from '../assets/js/data.js';
+// import { userData } from '../assets/js/data.js';
 import '../assets/css/App.css';
 
 class App extends Component {
   state = {
-    userData: userData,
+    userData: [],
     activeItemId: null,
     todoDisabled: false,
     activePomodoro: {}
@@ -86,8 +86,7 @@ class App extends Component {
 
     updatedUserData.map((todoItem) => {
       if(todoItem.id === this.state.activeItemId) {
-        todoItem.Pomodoro.minutes = 0;
-        todoItem.Pomodoro.seconds = 0;
+        todoItem.Pomodoro = this.state.activePomodoro;
 
         return todoItem;
       } else { return todoItem; }
@@ -95,18 +94,14 @@ class App extends Component {
 
     this.setState({
       todoDisabled: false,
-      updatedUserData,
-      activePomodoro: {
-        minutes: 0,
-        seconds: 0
-      }
+      updatedUserData
     });
   }
 
   render() {
     return (
       <div className="app">
-        <aside>
+        <aside className="hero-pattern-background">
           <Pomodoro
               activePomodoro={this.state.activePomodoro}
               incrementPomCount={this.incrementPomCount}
@@ -116,8 +111,8 @@ class App extends Component {
         </aside>
         <main className="app-todo">
           <header className="app__header">
-            <h1 className="title title--main color--red">Pomlist</h1>
-            <span className="title title--sub color--green">Get Things Done - The Smart Approach</span>
+            <h1 className="title title--main color--red">Pomodoro List</h1>
+            <span className="title title--sub color--green">Work for 25 minutes, rest for 5, and complete tasks!</span>
           </header>
 
           <div>

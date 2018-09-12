@@ -101,7 +101,7 @@ class Pomodoro extends Component {
 
         if (this.state.timerOn) {
             return  {
-                iconClass: "fas fa-times",
+                iconClass: "fas fa-pause",
                 buttonClass: className + " pom__button button--close color--red"
             }
         } else {

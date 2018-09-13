@@ -55,6 +55,8 @@ class Pomodoro extends Component {
         if (this.state.workPeriod) {
             if (currentMinutes === (maxWorkMinutes - 1)
                 && currentSeconds === (maxWorkSeconds)) {
+                    document.title = "Take a Break";
+
                     this.props.incrementPomCount();
                     return this.handleMaxTime();
             }
@@ -63,6 +65,8 @@ class Pomodoro extends Component {
         } else if (!this.state.workPeriod) {
             if (currentMinutes === (maxRestMinutes - 1)
                 && currentSeconds === maxWorkSeconds) {
+                    document.title = "Get Back to Work";
+
                     return this.handleMaxTime();
             }
 

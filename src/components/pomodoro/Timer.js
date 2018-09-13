@@ -37,10 +37,15 @@ class Timer extends Component {
 
     getColor = (conditional, color1, color2) => { conditional ? color1 : color2; }
 
+    setDocumentTitle = (workPeriod, timeString) => {
+        if(workPeriod && timeString !== '00:00' && timeString !== '24:59') { document.title = timeString; }
+        if(!workPeriod && timeString !== '00:00' && timeString !== '4:49') { document.title = timeString; }
+    }
+
     render() {
         const styles = this.getStyles();
         const timeString = this.getTimeString();
-        document.title = timeString;
+        this.setDocumentTitle(this.props.workPeriod, timeString);
 
         return(
             <div className="progress-bar">

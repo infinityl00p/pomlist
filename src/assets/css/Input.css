@@ -16,7 +16,7 @@
 
 .add-item--input::placeholder { color: #ccc; }
 .add-item--input:focus { outline: none; }
-
+.add-item--input:focus::placeholder { color: #fff; }
 /* .add-item--input:focus {
   outline: none;
   width: 80%;

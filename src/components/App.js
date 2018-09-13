@@ -5,12 +5,18 @@ import Pomodoro from './pomodoro/Pomodoro';
 import '../assets/css/App.css';
 
 class App extends Component {
-  state = {
-    userData: [],
-    activeItemId: null,
-    todoDisabled: false,
-    activePomodoro: {}
-  };
+  constructor() {
+    super();
+
+    const userData = window.localStorage.userData ? JSON.parse(window.localStorage.userData) : [];
+
+    this.state = {
+      userData,
+      activeItemId: null,
+      todoDisabled: false,
+      activePomodoro: {}
+    };
+  }
 
   handleTodoItemClick = (id) => {
     if (!this.state.todoDisabled) {
@@ -23,6 +29,8 @@ class App extends Component {
   addItem = (todoString) => {
     const id = Math.floor(Math.random() * 100 + 5);
     const userData = this.addDataNode(todoString, id);
+
+    window.localStorage.userData = JSON.stringify(userData);
 
     this.setState({
       userData,
@@ -74,6 +82,7 @@ class App extends Component {
       } else { return todoItem; }
     });
 
+    window.localStorage.userData = JSON.stringify(updatedUserData);
     this.setState({ userData: updatedUserData });
   }
 
@@ -92,10 +101,28 @@ class App extends Component {
       } else { return todoItem; }
     });
 
+
+    window.localStorage.userData = JSON.stringify(updatedUserData);
     this.setState({
       todoDisabled: false,
       updatedUserData
     });
+  }
+
+  updateLocalStorage = (minutes, seconds) => {
+    var updatedUserData = this.state.userData;
+
+    updatedUserData.map((todoItem) => {
+      if(todoItem.id === this.state.activeItemId) {
+        todoItem.Pomodoro.minutes = minutes;
+        todoItem.Pomodoro.seconds = seconds;
+
+
+        return todoItem;
+      } else { return todoItem; }
+    });
+
+    window.localStorage.userData = JSON.stringify(updatedUserData);
   }
 
   render() {
@@ -105,6 +132,7 @@ class App extends Component {
           <Pomodoro
               activePomodoro={this.state.activePomodoro}
               incrementPomCount={this.incrementPomCount}
+              updateLocalStorage={this.updateLocalStorage}
               disableTodo={this.disableTodo}
               enableTodo={this.enableTodo}
           />

@@ -85,6 +85,7 @@ class Pomodoro extends Component {
         pomodoro.minutes = minutes;
         pomodoro.seconds = seconds;
 
+        this.props.updateLocalStorage(minutes, seconds);
         this.setState({ pomodoro });
     }
 

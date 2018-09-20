@@ -5,13 +5,14 @@
   width: 100%;
   transition: 400ms ease;
   border-style: solid;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   border-color: #ccc;
   border-width: 1px;
   text-align: center;
   font-size: 1.8rem;
+  border-radius: 2rem;
 }
 
 .add-item--input::placeholder { color: #ccc; }

@@ -1,60 +1,67 @@
 .wrapper {
   margin-right: auto; /* 1 */
   margin-left:  auto; /* 1 */
-
   max-width: 960px; /* 2 */
-
   padding-right: 10px; /* 3 */
   padding-left:  10px; /* 3 */
 }
 
-
 .app {
   text-align: center;
   overflow: hidden;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
 }
 
-h1 {
-  font-size: 5rem;
-  font-weight: 200;
+header .icon {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
 }
 
-aside, main {
-  position: fixed;
-  top: 0;
-  bottom: 0;
+h1 {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-top: 0;
+  display: inline-block;
+}
+
+.app__header {
+  position: relative;
+  height: 5rem;
+  width: 100%;
+}
+
+.app__header-container {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
 }
 
 aside {
-  left: 0;
-  right: 75%;
-  background-color: #fff;
-  border-right: 1px solid #ddd;
+  display: block;
+  border-top: 1px solid #ddd;
 }
 
 main {
-  left: 25%;
-  right: 0;
+  display: block;
 }
 
 .title--main {
   padding: 1rem;
-  margin-top: 4rem;
   margin-bottom: 0;
 }
 
 .title--sub {
   position: relative;
   bottom: 2rem;
-  font-weight: 600;
+  font-weight: 100;
   display: block;
   padding: 1rem;
-  font-size: 1.4rem;
-  letter-spacing: 0.2em;
+  font-size: 1.2rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
@@ -63,10 +70,6 @@ main {
   main, aside {
     position: relative;
     display: block;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
   }
 
   main {

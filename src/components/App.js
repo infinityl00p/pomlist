@@ -3,6 +3,7 @@ import Todo from './todo/Todo';
 import Pomodoro from './pomodoro/Pomodoro';
 // import { userData } from '../assets/js/data.js';
 import '../assets/css/App.css';
+import Tomato from '../assets/svg/tomato.svg';
 
 class App extends Component {
   constructor() {
@@ -128,30 +129,31 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <aside className="hero-pattern-background">
-          <Pomodoro
-              activePomodoro={this.state.activePomodoro}
-              incrementPomCount={this.incrementPomCount}
-              updateLocalStorage={this.updateLocalStorage}
-              disableTodo={this.disableTodo}
-              enableTodo={this.enableTodo}
-          />
-        </aside>
         <main className="app-todo">
           <header className="app__header">
-            <h1 className="title title--main color--red">Pomodoro List</h1>
-            <span className="title title--sub color--green">Work for 25 minutes, rest for 5, and complete tasks!</span>
+            <div className="app__header-container">
+              <img src={Tomato} className="icon" />
+              <h1 className="title title--main">Pomodoro List</h1>
+              <span className="title title--sub">25 Minute Timer</span>
+            </div>
           </header>
 
-          <div>
-            <Todo
-              data={this.state.userData}
-              handleClick={this.handleTodoItemClick}
-              addItem={this.addItem}
-              activeItem={this.state.activeItemId}
-              disabled={this.state.todoDisabled}
+          <Todo
+            data={this.state.userData}
+            handleClick={this.handleTodoItemClick}
+            addItem={this.addItem}
+            activeItem={this.state.activeItemId}
+            disabled={this.state.todoDisabled}
+          />
+          <aside className="color-background">
+            <Pomodoro
+                activePomodoro={this.state.activePomodoro}
+                incrementPomCount={this.incrementPomCount}
+                updateLocalStorage={this.updateLocalStorage}
+                disableTodo={this.disableTodo}
+                enableTodo={this.enableTodo}
             />
-          </div>
+          </aside>
         </main>
       </div>
     );

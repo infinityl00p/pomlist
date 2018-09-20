@@ -9,7 +9,7 @@ class AddItem extends Component {
             <form className="add-item" onSubmit={this.props.handleSubmit}>
                 <Input
                     className={'add-item--input'}
-                    placeholder={'Add a task that you want to focus on!'}
+                    placeholder={'Add a task'}
                     onChange={this.props.handleChange}
                     value={this.props.inputValue}
                     disabled={this.props.disabled}

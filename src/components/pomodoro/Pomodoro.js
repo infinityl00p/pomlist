@@ -138,17 +138,18 @@ class Pomodoro extends Component {
 
         return(
             <section className={this.getPomodoroClassName()}>
-                <Timer
-                    timerOn={this.state.timerOn}
-                    workPeriod={this.state.workPeriod}
-                    minutes={this.getMinutes()}
-                    seconds={this.getSeconds()}
-                />
                 <Button
                     buttonContent={<i className={buttonClassNames.iconClass}></i>}
                     className={buttonClassNames.buttonClass}
                     onClick={this.handleToggle}
                     disabled={this.state.disabled}
+                />
+
+                <Timer
+                    timerOn={this.state.timerOn}
+                    workPeriod={this.state.workPeriod}
+                    minutes={this.getMinutes()}
+                    seconds={this.getSeconds()}
                 />
             </section>
         );

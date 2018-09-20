@@ -10,11 +10,6 @@ button:focus { outline: none; }
   margin: 0 1rem;
 }
 
-.pom__button {
-  position: relative;
-  top: 2rem;
-}
-
 .button--icon i {
   position: absolute;
   top: 50%;
@@ -38,11 +33,11 @@ button:focus { outline: none; }
 }
 
 .button--play {
-  border: 1px solid #27ae60;
+  border: 3px solid #ff6342;
   transition: 300ms ease;
 }
 
-.button--play i { transform: translate(-40%, -50%)}
+.button--play i { transform: translate(-50%, -50%)}
 
 .button--add:hover { background-color: #ff6342; }
 .button--add:hover i { color: #fff; }
@@ -51,5 +46,24 @@ button:focus { outline: none; }
 .button--close:hover { background-color: #ff6342; }
 .button--close:hover i { color: #fff; }
 
-.button--play:hover { background-color: #27ae60; }
 .button--play:hover i { color: #fff; }
+
+.pom__button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 6rem;
+  width: 6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.pom__button i {
+  color: #ff6342;
+  font-size: 1.5rem;
+}
+
+.pom-button-container {
+  display: block;
+}

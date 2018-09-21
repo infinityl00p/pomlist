@@ -6,7 +6,6 @@
 .pomodoro.disabled .CircularProgressbar-text { fill: #ddd!important; }
 .pomodoro.work .CircularProgressbar-text { fill: #fff!important; }
 
-
 .pomodoro.disabled .CircularProgressbar .CircularProgressbar-trail { stroke: #ddd; }
 
 .pomodoro.disabled .CircularProgressbar .CircularProgressbar-path { stroke: #ddd!important; }

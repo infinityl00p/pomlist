@@ -4,7 +4,7 @@ body {
   color: #666;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
-  background-color: #eee;
+  min-height: 100vh;
 }
 
 ::selection {
@@ -19,16 +19,6 @@ input, textarea, button {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
 }
-
-aside {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 5rem 0;
-}
-
-.color-background { background-color:  #ff6342; }
 
 .color--red { color: #ff6342; }
 

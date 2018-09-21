@@ -43,8 +43,18 @@ h1 {
 
 aside {
   display: block;
+  position: relative;
+  padding: 4rem 0;
   border-top: 1px solid #ddd;
 }
+
+.color-background {
+  background-color:  #ff6342;
+  transition: 300ms ease;
+}
+
+.color-background.disabled { background-color: rgb(91, 117, 246); }
+
 
 main {
   display: block;

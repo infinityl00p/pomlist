@@ -127,6 +127,8 @@ class App extends Component {
   }
 
   render() {
+    const asideClassName = this.state.todoDisabled ? "color-background disabled" : "color-background";
+
     return (
       <div className="app">
         <main className="app-todo">
@@ -145,7 +147,7 @@ class App extends Component {
             activeItem={this.state.activeItemId}
             disabled={this.state.todoDisabled}
           />
-          <aside className="color-background">
+          <aside className={asideClassName}>
             <Pomodoro
                 activePomodoro={this.state.activePomodoro}
                 incrementPomCount={this.incrementPomCount}

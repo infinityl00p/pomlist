@@ -4,6 +4,17 @@
   color: #bbb;
 }
 
+.todo.disabled .todo-list-item {
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  color: #bbb;
+}
+
+.todo.disabled .todo-list-item.active {
+  border: 1px solid rgb(91, 117, 246);;
+  color:rgb(91, 117, 246);;
+}
+
 .todo.disabled .button--add {
   border: 1px solid #ddd;
   color: #ddd;

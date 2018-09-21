@@ -2,10 +2,15 @@
   display: block;
   position: relative;
   border: 1px solid #ddd;
+  border-bottom: none;
   background-color: #fff;
   font-size: 2rem;
   padding: 5px;
   transition: 200ms ease-out;
+}
+
+.todo-list-item:last-child {
+  border-bottom: 1px solid #ddd;
 }
 
 .todo-list-item:hover {

@@ -71,7 +71,7 @@ class Pomodoro extends Component {
 							return this.handleMaxTime();
 			}
 
-			this.incrementTime();
+				this.incrementTime();
 			}
 
 		return;
@@ -134,6 +134,7 @@ class Pomodoro extends Component {
 		if (this.state.disabled) {
 			pomodoroClassName += " disabled";
 		}
+
 		if (this.state.currentPomodoro.workPeriod) {
 			pomodoroClassName += " work";
 		} else if (this.state.currentPomodoro.workPeriod === false) {

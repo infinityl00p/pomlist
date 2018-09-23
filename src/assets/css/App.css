@@ -7,25 +7,14 @@
 }
 
 .app {
+  position: relative;
   text-align: center;
   overflow: hidden;
-  position: relative;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', sans-serif;
 }
 
 header .icon {
   height: 2rem;
   width: 2rem;
-  display: inline-block;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 200;
-  margin-top: 0;
   display: inline-block;
 }
 
@@ -55,9 +44,10 @@ aside {
 
 .color-background.disabled { background-color: rgb(91, 117, 246); }
 
-
 main {
+  position: relative;
   display: block;
+  min-height: 100vh;
 }
 
 .title--main {
@@ -75,6 +65,12 @@ main {
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
+
+.color--red { color: #ff6342; }
+
+.color--green { color: #27ae60; }
+
+.color--blue { color:om #2196F3; }
 
 @media only screen and (max-width: 769px) {
   header {
@@ -95,5 +91,4 @@ main {
     width: 100%;
     padding-bottom: 5rem;
   }
-
 }

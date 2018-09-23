@@ -38,21 +38,11 @@ class App extends Component {
       activeItemId: id,
       activePomodoro: {
         minutes: 0,
-        seconds: 0
+        seconds: 0,
+        workPeriod: true
       }
     });
   }
-
-  updateCurrentPom = () => {
-    var activePomodoro = this.state.userData.filter((object) => {
-      if (object.id === this.state.activeItemId) {
-        return object.Pomodoro;
-      } return false;
-    });
-
-    return this.setState({ activePomodoro: activePomodoro[0].Pomodoro });
-  }
-
 
   addDataNode = (todoString, id) => {
     const userData = this.state.userData;
@@ -64,11 +54,22 @@ class App extends Component {
       completedPoms: 0,
       Pomodoro: {
         minutes: 0,
-        seconds: 0
+        seconds: 0,
+        workPeriod: true
       }
     });
 
     return userData;
+  }
+
+  updateCurrentPom = () => {
+    var activePomodoro = this.state.userData.filter((object) => {
+      if (object.id === this.state.activeItemId) {
+        return object.Pomodoro;
+      } return false;
+    });
+
+    return this.setState({ activePomodoro: activePomodoro[0].Pomodoro });
   }
 
   incrementPomCount = () => {
@@ -147,15 +148,17 @@ class App extends Component {
             activeItem={this.state.activeItemId}
             disabled={this.state.todoDisabled}
           />
+
           <aside className={asideClassName}>
             <Pomodoro
-                activePomodoro={this.state.activePomodoro}
-                incrementPomCount={this.incrementPomCount}
-                updateLocalStorage={this.updateLocalStorage}
-                disableTodo={this.disableTodo}
-                enableTodo={this.enableTodo}
+              activePomodoro={this.state.activePomodoro}
+              incrementPomCount={this.incrementPomCount}
+              updateLocalStorage={this.updateLocalStorage}
+              disableTodo={this.disableTodo}
+              enableTodo={this.enableTodo}
             />
           </aside>
+
         </main>
       </div>
     );

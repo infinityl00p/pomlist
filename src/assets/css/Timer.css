@@ -1,10 +1,27 @@
 .progress-bar {
-  height: 15rem;
-  width: 15rem;
-  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  right: 2rem;
 }
 
 .CircularProgressbar .CircularProgressbar-text {
   font-family: 'Nunito', sans-serif;
   font-weight: 200;
 }
+
+.pomodoro .CircularProgressbar .CircularProgressbar-text {
+  fill: #fff!important;
+  font-size: 2.5rem!important;
+}
+.pomodoro.disabled .CircularProgressbar-text { fill: #ddd!important; }
+.pomodoro.work .CircularProgressbar-text { fill: #fff!important; }
+
+.pomodoro.disabled .CircularProgressbar .CircularProgressbar-trail { stroke: #ddd; }
+
+.pomodoro.disabled .CircularProgressbar .CircularProgressbar-path { stroke: #ddd!important; }
+.pomodoro.work .CircularProgressbar .CircularProgressbar-path { stroke: #fff!important; }
+
+.CircularProgressbar-trail, .CircularProgressbar-path {
+ stroke-width: 6; }

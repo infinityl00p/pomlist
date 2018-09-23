@@ -12,6 +12,11 @@
   overflow: hidden;
 }
 
+header {
+  background-color: #ff6342;
+  color: #fff;
+}
+
 header .icon {
   height: 2rem;
   width: 2rem;
@@ -26,24 +31,8 @@ header .icon {
 
 .app__header-container {
   position: absolute;
-  top: 1rem;
   left: 2rem;
 }
-
-aside {
-  display: block;
-  position: relative;
-  padding: 4rem 0;
-  border-top: 1px solid #ddd;
-}
-
-.color-background {
-  background-color:  #ff6342;
-  transition: 300ms ease;
-}
-
-.color-background.break { background-color: rgb(91, 117, 246); }
-.color-background.work { background-color: #2ecc71; }
 
 main {
   position: relative;
@@ -78,7 +67,7 @@ main {
     padding-bottom: 5rem;
   }
 
-  main, aside {
+  main {
     position: relative;
     display: block;
   }
@@ -86,10 +75,5 @@ main {
   main {
     text-align: center;
     width: 100%;
-  }
-
-  aside {
-    width: 100%;
-    padding-bottom: 5rem;
   }
 }

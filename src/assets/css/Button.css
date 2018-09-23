@@ -1,8 +1,7 @@
 button:hover { cursor: pointer; }
 button:focus { outline: none; }
 
-
-.button--icon {
+.todo .button--icon {
   position: relative;
   background-color: #fff;
   height: 5rem;
@@ -11,7 +10,7 @@ button:focus { outline: none; }
   margin: 0 1rem;
 }
 
-.button--icon i {
+.todo .button--icon i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,50 +48,44 @@ button:focus { outline: none; }
   color: #ff6342;
 }
 
-.button--close {
-  border: 1px solid #ff6342;
-  transition: 300ms ease;
-}
-
-.button--play {
-  border: 3px solid #ff6342;
-  transition: 300ms ease;
-}
-
-.button--play i { transform: translate(-50%, -50%)}
+/* .button--play i { transform: translate(-50%, -50%)} */
 
 .button--add:hover { background-color: #ff6342; }
 .button--add:hover i { color: #fff; }
 
-.button--close:hover { background-color: #ff6342; }
+/* .button--close:hover { background-color: #ff6342; }
 .button--close:hover i { color: #fff; }
 
 .button--play:hover { background-color: #ff6342; }
-.button--play:hover i { color: #fff; }
+.button--play:hover i { color: #fff; } */
 
 .pom__button {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 6rem;
-  width: 6rem;
-  padding: 0;
-  margin: 0;
+  display: inline-block;
+  position: relative;
+  bottom: 1.7rem;
+  right: 4rem;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  transition: 300ms ease;
+  color: #fff;
 }
 
-.pom__button i {
-  color: #ff6342;
-  font-size: 1.5rem;
+.pom_
+
+.pomodoro.disabled i { color: #ddd; }
+
+.pomodoro.disabled .button--play, .pomodoro.disabled .button--close {
+  color: #ddd;
 }
 
-.pom-button-container { display: block; }
+/* .pom-button-container { display: block; } */
 
 /******************************************************
     Break
 ******************************************************/
-.break .button--close {
-  border: 3px solid rgb(91, 117, 246);
+/* .break .button--close {
+  border: 4px solid rgb(91, 117, 246);
   transition: 300ms ease;
 }
 
@@ -100,16 +93,16 @@ button:focus { outline: none; }
 .break .button--close:hover i { color: #fff; }
 
 .break .button--play:hover { background-color: rgb(91, 117, 246); }
-.break .button--play { border: 3px solid rgb(91, 117, 246); }
+.break .button--play { border: 4px solid rgb(91, 117, 246); }
 
 .break .pom__button i { color: rgb(91, 117, 246); }
-.break .pom__button:hover i { color: #fff; }
+.break .pom__button:hover i { color: #fff; } */
 
 /******************************************************
     Work
 ******************************************************/
-.work .button--close {
-  border: 3px solid #2ecc71;
+/* .work .button--close {
+  border: 4px solid #2ecc71;
   transition: 300ms ease;
 }
 
@@ -117,7 +110,7 @@ button:focus { outline: none; }
 .work .button--close:hover i { color: #fff; }
 
 .work .button--play:hover { background-color: #2ecc71; }
-.work .button--play { border: 3px solid #2ecc71; }
+.work .button--play { border: 4px solid #2ecc71; }
 
 .work .pom__button i { color: #2ecc71; }
-.work .pom__button:hover i { color: #fff; }
+.work .pom__button:hover i { color: #fff; } */

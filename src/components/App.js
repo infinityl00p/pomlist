@@ -145,19 +145,19 @@ class App extends Component {
     window.localStorage.userData = JSON.stringify(updatedUserData);
   }
 
-  getAsideClassName = () => {
-    let asideClassName = "color-background";
+  getPomodoroClassName = () => {
+    let pomodoroClassName = "color-background";
     const activePomodoro = this.state.activePomodoro;
 
     if (this.state.activeItemId) {
       if (activePomodoro.workPeriod) {
-        asideClassName += " work";
+        pomodoroClassName += " work";
       } else {
-        asideClassName += " break";
+        pomodoroClassName += " break";
       }
     }
 
-    return asideClassName;
+    return pomodoroClassName;
   }
 
   render() {
@@ -167,8 +167,17 @@ class App extends Component {
           <header className="app__header">
             <div className="app__header-container">
               <img src={Tomato} className="icon" alt="pomlist icon" />
-              <h1 className="title title--main">Pomodoro List</h1>
-              <span className="title title--sub">25 Minute Timer</span>
+              <h1 className="title title--main">Pomlist</h1>
+            </div>
+
+            <div className={this.getPomodoroClassName()}>
+              <Pomodoro
+              activePomodoro={this.state.activePomodoro}
+                incrementPomCount={this.incrementPomCount}
+                updateLocalStorage={this.updateLocalStorage}
+                disableTodo={this.disableTodo}
+                enableTodo={this.enableTodo}
+              />
             </div>
           </header>
 
@@ -180,16 +189,6 @@ class App extends Component {
             disabled={this.state.todoDisabled}
             trashItem={this.trashItem}
           />
-
-          <aside className={this.getAsideClassName()}>
-            <Pomodoro
-              activePomodoro={this.state.activePomodoro}
-              incrementPomCount={this.incrementPomCount}
-              updateLocalStorage={this.updateLocalStorage}
-              disableTodo={this.disableTodo}
-              enableTodo={this.enableTodo}
-            />
-          </aside>
 
         </main>
       </div>

@@ -3,7 +3,7 @@ import Todo from './todo/Todo';
 import Pomodoro from './pomodoro/Pomodoro';
 // import { userData } from '../assets/js/data.js';
 import '../assets/css/App.css';
-import Tomato from '../assets/svg/tomato.svg';
+import Tomato from '../assets/svg/tomato_white.svg';
 
 class App extends Component {
   constructor() {

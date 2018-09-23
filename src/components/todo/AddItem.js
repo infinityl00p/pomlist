@@ -8,7 +8,7 @@ class AddItem extends Component {
         return(
             <form className="add-item" onSubmit={this.props.handleSubmit}>
                 <Input
-                    className={'add-item--input'}
+                    className={'add-item--input clearfix'}
                     placeholder={'Add a task'}
                     onChange={this.props.handleChange}
                     value={this.props.inputValue}

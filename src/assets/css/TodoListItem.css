@@ -1,15 +1,15 @@
 .todo-list-item {
   display: flex;
   position: relative;
-  /* border: 1px solid #ddd;
-  border-bottom: none; */
+  border: 1px solid #ddd;
+  border-bottom: none;
   background-color: #fff;
   font-size: 2rem;
   padding: 5px;
   transition: 200ms ease-out;
 }
 
-/* .todo-list-item:last-child { border-bottom: 1px solid #ddd; }
+.todo-list-item:last-child { border-bottom: 1px solid #ddd; }
 
 .todo-list-item:hover {
   cursor: pointer;
@@ -25,11 +25,12 @@
 }
 
 .todo.disabled .todo-list-item:hover { box-shadow: none; }
- */
+
 
 .todo.disabled .todo-list-item.active {
   box-shadow: none;
   background-color: #fff;
+  border-left: 5px solid#ff6342;
 }
 
 .todo-list-item .description, .todo-list-item .poms-completed, .todo-list-item .button-container {
@@ -50,16 +51,9 @@
 }
 
 .todo-list-item .button-container {
-  width: 5%;
+  width: 10%;
   text-align: left;
   font-size: 1.2rem;
-}
-
-.todo-list-item .poms-completed {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .icon-tomato{
@@ -77,4 +71,8 @@
 	width: 1.5rem;
   height: 1.5rem;
   margin: 0 2px;
+}
+
+@media only screen and (max-width: 769px) {
+  .icon-tomato:not(:nth-child(2)) { display: none; }
 }

@@ -63,16 +63,9 @@ main {
 .color--blue { color:om #2196F3; }
 
 @media only screen and (max-width: 769px) {
-  header {
-    padding-bottom: 5rem;
-  }
-
   main {
     position: relative;
     display: block;
-  }
-
-  main {
     text-align: center;
     width: 100%;
   }

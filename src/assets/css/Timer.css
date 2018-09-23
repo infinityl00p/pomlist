@@ -15,13 +15,12 @@
   fill: #fff!important;
   font-size: 2.5rem!important;
 }
-.pomodoro.disabled .CircularProgressbar-text { fill: #ddd!important; }
+.pomodoro.disabled .CircularProgressbar-text { fill: #eee!important; }
 .pomodoro.work .CircularProgressbar-text { fill: #fff!important; }
 
-.pomodoro.disabled .CircularProgressbar .CircularProgressbar-trail { stroke: #ddd; }
+.CircularProgressbar .CircularProgressbar-trail { stroke: transparent;  }
 
-.pomodoro.disabled .CircularProgressbar .CircularProgressbar-path { stroke: #ddd!important; }
+.pomodoro.disabled .CircularProgressbar .CircularProgressbar-path { stroke: #eee!important; }
 .pomodoro.work .CircularProgressbar .CircularProgressbar-path { stroke: #fff!important; }
 
-.CircularProgressbar-trail, .CircularProgressbar-path {
- stroke-width: 6; }
+.CircularProgressbar-trail, .CircularProgressbar-path { stroke-width: 6; }

@@ -4,11 +4,21 @@ import '../../assets/css/TodoListItem.css';
 
 class TodoListItem extends Component {
     renderTomatoes = (count) => {
+        const mq = window.matchMedia( "(max-width: 769px)" );
         var tomatoes = [];
 
-        for(var i = 0; i < count; i++) {
-            const key = "tomato" + (i+1);
-            tomatoes.push(<span key={key} className="icon-tomato"></span>)
+        if (mq.matches) {
+            tomatoes.push(
+                <div>
+                    <span className="count">{count}</span>
+                    <span className="icon-tomato"></span>
+                </div>
+            );
+        } else {
+            for(var i = 0; i < count; i++) {
+                const key = "tomato" + (i+1);
+                tomatoes.push(<span key={key} className="icon-tomato"></span>)
+            }
         }
 
         return tomatoes;

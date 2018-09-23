@@ -1,24 +1,31 @@
 .add-item--input {
+  display: block;
   color: #333;
-  height: 2rem;
-  padding: 1rem 2rem;
-  width: 100%;
-  transition: 400ms ease;
-  border-style: solid;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-color: #ccc;
-  border-width: 1px;
+  width: 15rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
   font-size: 1.5rem;
-  max-width: 75%;
+  margin: 0 auto;
+  padding: 5px 1rem;
+  text-align: center;
+  transition: 400ms ease;
 }
 
 .add-item--input::placeholder { color: #ccc; }
-.add-item--input:focus { outline: none; }
+.add-item--input:focus {
+  outline: none;
+  width: 50rem;
+}
 .add-item--input:focus::placeholder { color: #fff; }
 
-/* .add-item--input:focus {
-  outline: none;
-  width: 80%;
-} */
+.todo.disabled .add-item--input {
+  border-bottom: 1px solid #eee;
+  background-color: #eee;
+  color: #eee;
+}
+
+@media only screen and (max-width: 769px) {
+  .add-item--input:focus {
+    width: 70%;
+  }
+}

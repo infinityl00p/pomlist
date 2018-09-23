@@ -42,7 +42,8 @@ aside {
   transition: 300ms ease;
 }
 
-.color-background.disabled { background-color: rgb(91, 117, 246); }
+.color-background.break { background-color: rgb(91, 117, 246); }
+.color-background.work { background-color: #2ecc71; }
 
 main {
   position: relative;

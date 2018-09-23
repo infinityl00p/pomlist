@@ -11,8 +11,8 @@
 }
 
 .todo.disabled .todo-list-item.active {
-  border: 1px solid rgb(91, 117, 246);;
-  color:rgb(91, 117, 246);;
+  border: 1px solid #ff6342;
+  color:#ff6342;;
 }
 
 .todo.disabled .button--add {

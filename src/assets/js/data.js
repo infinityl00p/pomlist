@@ -7,7 +7,8 @@ module.exports = {
       completedPoms: 4,
       Pomodoro: {
         minutes: 24,
-        seconds: 55
+        seconds: 55,
+        workPeriod: 'null'
       }
     },
     {
@@ -17,7 +18,8 @@ module.exports = {
       completedPoms: 0,
       Pomodoro: {
         minutes: 4,
-        seconds: 55
+        seconds: 55,
+        workPeriod: 'null'
       }
     },
     {
@@ -27,7 +29,8 @@ module.exports = {
       completedPoms: 1,
       Pomodoro: {
         minutes: 4,
-        seconds: 20
+        seconds: 20,
+        workPeriod: 'null'
       },
     },
     {
@@ -37,7 +40,8 @@ module.exports = {
       completedPoms: 3,
       Pomodoro: {
         minutes: 4,
-        seconds: 20
+        seconds: 20,
+        workPeriod: 'null'
       }
     }
   ],

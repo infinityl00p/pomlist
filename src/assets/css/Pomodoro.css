@@ -2,7 +2,7 @@
 
 .pomodoro.disabled i { color: #ddd; }
 
-.pomodoro .CircularProgressbar-text { color: #ff6342!important; }
+.pomodoro .CircularProgressbar .CircularProgressbar-text { fill: #fff!important; }
 .pomodoro.disabled .CircularProgressbar-text { fill: #ddd!important; }
 .pomodoro.work .CircularProgressbar-text { fill: #fff!important; }
 

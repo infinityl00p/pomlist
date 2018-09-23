@@ -10,7 +10,7 @@ class Timer extends Component {
 
     getPercentage = () => {
         var ElapsedInSeconds = (this.props.minutes * 60) + this.props.seconds;
-        var secondsInTime = 25 * 60;
+        var secondsInTime = this.props.workPeriod ? (25 * 60) : (5 * 60);
 
         return (ElapsedInSeconds / secondsInTime) * 100;
     }

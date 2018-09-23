@@ -48,16 +48,6 @@ button:focus { outline: none; }
 .button--play:hover { background-color: #ff6342; }
 .button--play:hover i { color: #fff; }
 
-.disabled .button--close {
-  border: 3px solid rgb(91, 117, 246);
-  transition: 300ms ease;
-}
-.disabled .button--close:hover { background-color: rgb(91, 117, 246); }
-.disabled .button--close:hover i { color: #fff; }
-
-.disabled .button--play:hover { background-color: rgb(91, 117, 246); }
-.disabled .button--play { border: 3px solid rgb(91, 117, 246); }
-
 .pom__button {
   position: absolute;
   top: 0;
@@ -69,15 +59,37 @@ button:focus { outline: none; }
   margin: 0;
 }
 
-.disabled .pom__button i {
-  color: rgb(91, 117, 246);
-}
-
 .pom__button i {
   color: #ff6342;
   font-size: 1.5rem;
 }
 
-.pom-button-container {
-  display: block;
+.pom-button-container { display: block; }
+
+.break .button--close {
+  border: 3px solid rgb(91, 117, 246);
+  transition: 300ms ease;
 }
+
+.break .button--close:hover { background-color: rgb(91, 117, 246); }
+.break .button--close:hover i { color: #fff; }
+
+.break .button--play:hover { background-color: rgb(91, 117, 246); }
+.break .button--play { border: 3px solid rgb(91, 117, 246); }
+
+.break .pom__button i { color: rgb(91, 117, 246); }
+.break .pom__button:hover i { color: #fff; }
+
+.work .button--close {
+  border: 3px solid #2ecc71;
+  transition: 300ms ease;
+}
+
+.work .button--close:hover { background-color: #2ecc71; }
+.work .button--close:hover i { color: #fff; }
+
+.work .button--play:hover { background-color: #2ecc71; }
+.work .button--play { border: 3px solid #2ecc71; }
+
+.work .pom__button i { color: #2ecc71; }
+.work .pom__button:hover i { color: #fff; }

@@ -127,8 +127,23 @@ class App extends Component {
     window.localStorage.userData = JSON.stringify(updatedUserData);
   }
 
+  getAsideClassName = () => {
+    let asideClassName = "color-background";
+    const activePomodoro = this.state.activePomodoro;
+
+    if (this.state.activeItemId) {
+      if (activePomodoro.workPeriod) {
+        asideClassName += " work";
+      } else {
+        asideClassName += " break";
+      }
+    }
+
+    return asideClassName;
+  }
+
   render() {
-    const asideClassName = this.state.todoDisabled ? "color-background disabled" : "color-background";
+
 
     return (
       <div className="app">
@@ -149,7 +164,7 @@ class App extends Component {
             disabled={this.state.todoDisabled}
           />
 
-          <aside className={asideClassName}>
+          <aside className={this.getAsideClassName()}>
             <Pomodoro
               activePomodoro={this.state.activePomodoro}
               incrementPomCount={this.incrementPomCount}

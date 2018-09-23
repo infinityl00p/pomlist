@@ -62,6 +62,24 @@ class App extends Component {
     return userData;
   }
 
+  trashItem = (itemId) => {
+    let confirm = window.confirm('Are you sure you want to permanently delete this item?');
+
+    if (confirm) {
+      let userData = this.state.userData;
+
+      userData = userData.filter((pomodoro) => {
+        return pomodoro.id !== itemId;
+      });
+
+      window.localStorage.userData = JSON.stringify(userData);
+
+      return this.setState({ userData });
+    }
+
+    return;
+  }
+
   updateCurrentPom = () => {
     var activePomodoro = this.state.userData.filter((object) => {
       if (object.id === this.state.activeItemId) {
@@ -143,14 +161,12 @@ class App extends Component {
   }
 
   render() {
-
-
     return (
       <div className="app">
         <main className="app-todo">
           <header className="app__header">
             <div className="app__header-container">
-              <img src={Tomato} className="icon" />
+              <img src={Tomato} className="icon" alt="pomlist icon" />
               <h1 className="title title--main">Pomodoro List</h1>
               <span className="title title--sub">25 Minute Timer</span>
             </div>
@@ -162,6 +178,7 @@ class App extends Component {
             addItem={this.addItem}
             activeItem={this.state.activeItemId}
             disabled={this.state.todoDisabled}
+            trashItem={this.trashItem}
           />
 
           <aside className={this.getAsideClassName()}>

@@ -35,7 +35,9 @@ class Timer extends Component {
         }
     }
 
-    getColor = (conditional, color1, color2) => { conditional ? color1 : color2; }
+    getColor = (conditional, color1, color2) => {
+        return conditional ? color1 : color2;
+    }
 
     setDocumentTitle = (workPeriod, timeString) => {
         if(workPeriod && timeString !== '00:00' && timeString !== '24:59') { document.title = timeString; }

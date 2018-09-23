@@ -18,6 +18,8 @@ class TodoList extends Component {
                                 pomsCompleted={dataObject.completedPoms}
                                 handleClick={this.props.handleClick}
                                 activeItem={this.props.activeItem}
+                                trashItem={this.props.trashItem}
+                                disabled={this.props.disabled}
                             />
                         );
                     })

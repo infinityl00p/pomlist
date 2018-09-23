@@ -1,6 +1,7 @@
 button:hover { cursor: pointer; }
 button:focus { outline: none; }
 
+
 .button--icon {
   position: relative;
   background-color: #fff;
@@ -16,6 +17,27 @@ button:focus { outline: none; }
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
+}
+
+.button--trash {
+  border: none;
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: 300ms ease;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.button--trash:hover {
+  color: #666;
+  transform: scale(1.02);
+}
+
+.disabled .active .button--trash { color: #fff; }
+
+.disabled .button--trash:hover {
+  color: #ddd;
+  transform: none;
 }
 
 .button--add {
@@ -66,6 +88,9 @@ button:focus { outline: none; }
 
 .pom-button-container { display: block; }
 
+/******************************************************
+    Break
+******************************************************/
 .break .button--close {
   border: 3px solid rgb(91, 117, 246);
   transition: 300ms ease;
@@ -80,6 +105,9 @@ button:focus { outline: none; }
 .break .pom__button i { color: rgb(91, 117, 246); }
 .break .pom__button:hover i { color: #fff; }
 
+/******************************************************
+    Work
+******************************************************/
 .work .button--close {
   border: 3px solid #2ecc71;
   transition: 300ms ease;

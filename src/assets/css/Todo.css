@@ -10,11 +10,6 @@
   color: #bbb;
 }
 
-.todo.disabled .todo-list-item.active {
-  border: 1px solid #ff6342;
-  color:#ff6342;;
-}
-
 .todo.disabled .button--add {
   border: 1px solid #ddd;
   color: #ddd;

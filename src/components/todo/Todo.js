@@ -14,6 +14,12 @@ class Todo extends Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (this.props !== nextProps) {
+            this.setState({ todoList: nextProps.data });
+        }
+    }
+
     onInputChange = (event) => {
         this.setState({ inputText: event.target.value });
     }
@@ -53,6 +59,7 @@ class Todo extends Component {
                     handleClick={this.props.handleClick}
                     activeItem={this.props.activeItem}
                     disabled={this.props.disabled}
+                    trashItem={this.props.trashItem}
                 />
             </section>
         );

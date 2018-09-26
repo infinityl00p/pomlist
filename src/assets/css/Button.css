@@ -42,14 +42,19 @@ button:focus { outline: none; }
 .button--add {
   transition: 200ms ease;
   border: 2px solid #ff6342;
+  color: #ff6342;
 }
 
-.button--add {
-  color: #ff6342;
+.break .button--add {
+  color: #2196F3;
+  border: 2px solid #2196F3;
 }
 
 .button--add:hover { background-color: #ff6342; }
 .button--add:hover i { color: #fff; }
+.break .button--add:hover {
+  background-color: #2196F3;
+}
 
 .pom__button {
   display: inline-block;

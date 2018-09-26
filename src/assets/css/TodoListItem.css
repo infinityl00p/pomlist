@@ -24,6 +24,10 @@
   border-left: 5px solid#ff6342;
 }
 
+.break .todo-list-item.active {
+  border-left: 5px solid #2196F3;
+}
+
 .todo.disabled .todo-list-item:hover { box-shadow: none; }
 
 
@@ -31,6 +35,10 @@
   box-shadow: none;
   background-color: #fff;
   border-left: 5px solid#ff6342;
+}
+
+.break .todo.disabled .todo-list-item.active {
+  border-left: 5px solid #2196F3;
 }
 
 .todo-list-item .description, .todo-list-item .poms-completed, .todo-list-item .button-container {

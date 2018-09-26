@@ -160,9 +160,25 @@ class App extends Component {
     return pomodoroClassName;
   }
 
+  getAppClassName = () => {
+    let pomodoroClassName = "app";
+    const activePomodoro = this.state.activePomodoro;
+
+    if (this.state.activeItemId) {
+      if (activePomodoro.workPeriod) {
+        pomodoroClassName += " work";
+      } else {
+        pomodoroClassName += " break";
+      }
+    }
+
+    return pomodoroClassName;
+
+  }
+
   render() {
     return (
-      <div className="app">
+      <div className={this.getAppClassName()}>
         <main className="app-todo">
           <header className="app__header">
             <div className="app__header-container">

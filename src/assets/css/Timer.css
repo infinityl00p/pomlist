@@ -21,6 +21,9 @@
 .CircularProgressbar .CircularProgressbar-trail { stroke: transparent;  }
 
 .pomodoro.disabled .CircularProgressbar .CircularProgressbar-path { stroke: #eee!important; }
+
+.CircularProgressbar .CircularProgressbar-path { stroke: #fff!important; }
+
 .pomodoro.work .CircularProgressbar .CircularProgressbar-path { stroke: #fff!important; }
 
 .CircularProgressbar-trail, .CircularProgressbar-path { stroke-width: 6; }

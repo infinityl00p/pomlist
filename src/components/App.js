@@ -74,6 +74,14 @@ class App extends Component {
 
       window.localStorage.userData = JSON.stringify(userData);
 
+      if (userData.length === 0) {
+        return this.setState({
+          userData: [],
+          activeItemId: null,
+          activePomodoro: {}
+        })
+      }
+
       return this.setState({ userData });
     }
 

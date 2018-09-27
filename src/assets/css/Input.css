@@ -6,15 +6,18 @@
   border-bottom: 1px solid #ccc;
   font-size: 1.5rem;
   margin: 0 auto;
-  padding: 5px 1rem;
+  padding: 1rem 1rem;
   text-align: center;
   transition: 400ms ease;
 }
 
-.add-item--input::placeholder { color: #ccc; }
+.add-item--input::placeholder {
+  color: #ccc;
+  transition: 400ms ease-in;
+}
 .add-item--input:focus {
   outline: none;
-  width: 50rem;
+  width: 40rem;
 }
 .add-item--input:focus::placeholder { color: #fff; }
 

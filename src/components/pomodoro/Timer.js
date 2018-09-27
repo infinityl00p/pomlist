@@ -40,8 +40,8 @@ class Timer extends Component {
     }
 
     setDocumentTitle = (workPeriod, timeString) => {
-        if(workPeriod && timeString !== '00:00' && timeString !== '24:59') { document.title = timeString; }
-        if(!workPeriod && timeString !== '00:00' && timeString !== '4:49') { document.title = timeString; }
+        if(workPeriod && timeString !== '00:00' && timeString !== '24:59') { document.title = 'Work - ' + timeString; }
+        if(!workPeriod && timeString !== '00:00' && timeString !== '4:49') { document.title = 'Break - ' + timeString; }
     }
 
     render() {
